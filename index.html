@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ================================ -->
+    <div id="warnMsg">
+      <div class="warnContain">
+        <h2>Warning</h2>
+        <p id="warnText">Please Enter Student Name!</p>
+        <button id="warnBtn">OK</button>
+      </div>
+    </div>
+    <!-- ================================ -->
+    <div class="contain">
+      <!-- HEAD -->
+      <div class="head">
+        <h2>Student System</h2>
+        <p>
+          Eng. Saleh Alfaqeer
+        </p>
+        <small>Not responsive with phones</small>
+      </div>
+
+      <!-- +++++++ -->
+      <div class="divid"></div>
+      <!-- +++++++ -->
+
+      <!-- INPUTS -->
+      <div class="inputs">
+        <input type="text" id="name" placeholder="Name" />
+        <input onkeyup="getStatus()" type="number" id="amount" placeholder="Amount" min="0" max="100000" />
+        <small id="status"></small>
+        <button id="submit">Create</button>
+      </div>
+
+      <!-- +++++++ -->
+      <div class="divid"></div>
+      <!-- +++++++ -->
+
+      <!-- OUTPUTS -->
+      <div class="outputs">
+        <div class="searchBlock">
+          <input onkeyup="searchStd(this.value)" type="text" id="search" placeholder="search" />
+          <button onclick="getSearchMode(this.id)" id="searchName">Search by name</button>
+          <button onclick="getSearchMode(this.id)" id="searchStatus">Search by status</button>
+        </div>
+        <!-- +++++++ -->
+        <div class="divid"></div>
+        <!-- +++++++ -->
+        <div id="deleteAll"></div>
+        <table>
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>amount</th>
+            <th>status</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+          <tbody id="tbody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
